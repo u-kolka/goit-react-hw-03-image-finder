@@ -1,10 +1,15 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import { createPortal } from 'react-dom';
-
+import PropTypes from 'prop-types'; 
 
 const modalRoot = document.querySelector('#modal-root');
 
 export default class Modal extends Component {
+
+  static propTypes = {
+    image: PropTypes.string.isRequired,
+    tags: PropTypes.string.isRequired,
+  }
 
   componentDidMount() {
     window.addEventListener('keydown', this.handleKeyDown);

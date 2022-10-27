@@ -1,7 +1,13 @@
 import { Component } from "react"
+import PropTypes from 'prop-types'; 
 import Modal from "../Modal/Modal";
 
 export class ImageGalleryItem extends Component {
+
+    static propTypes = {
+        image: PropTypes.string.isRequired,
+        tags: PropTypes.string.isRequired,
+    }
 
     state = {
         isModalOpen: false,
