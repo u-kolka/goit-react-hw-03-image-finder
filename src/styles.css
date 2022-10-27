@@ -1,3 +1,5 @@
+@import-normalize;  /* bring in normalize.css styles */
+
 html {
   box-sizing: border-box;
   width: 100vw;
@@ -37,6 +39,14 @@ img {
 }
 
 /*
+ * Стили компонента Wrapper
+ */
+.Wrapper {
+margin: 0 auto;
+text-align: center;
+}
+
+/*
  * Стили компонента Searchbar
  */
 .Searchbar {
@@ -73,10 +83,11 @@ img {
 
 .SearchForm-button {
   display: inline-block;
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   border: 0;
-  background-image: url('https://image.flaticon.com/icons/svg/149/149852.svg');
+  background-color: #fff;
+  background-image: url('../public/search.svg');
   background-size: 40%;
   background-repeat: no-repeat;
   background-position: center;
@@ -128,7 +139,7 @@ img {
   grid-gap: 16px;
   margin-top: 0;
   margin-bottom: 0;
-  padding: 0;
+  padding: 10px 0 ;
   list-style: none;
   margin-left: auto;
   margin-right: auto;
@@ -145,7 +156,7 @@ img {
 
 .ImageGalleryItem-image {
   width: 100%;
-  height: 260px;
+  height: 240px;
   object-fit: cover;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -159,7 +170,7 @@ img {
  * Стили компонента Modal
  */
 
-.overlay {
+.Overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -172,21 +183,13 @@ img {
   z-index: 1200;
 }
 
-.modal {
-  max-width: calc(100vw - 48px);
-  max-height: calc(100vh - 24px);
-}
-
-.modal {
+.Modal {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-height: 300px;
-  max-width: 600px;
-  width: 100%;
-  padding: 12px;
-  background-color: #fff;
+  max-height: 80vh;
+  max-width: 80vw;
   border-radius: 3px;
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);

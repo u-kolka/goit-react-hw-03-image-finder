@@ -1,9 +1,29 @@
+import { Component } from "react"
+import Modal from "../Modal/Modal";
 
+export class ImageGalleryItem extends Component {
 
-export const ImageGalleryItem = ({ image, tags }) => {
+    state = {
+        isModalOpen: false,
+    }
+
+    openModal = () => {
+        this.setState({isModalOpen: true})
+    }
+
+    closeModal = () => {
+        this.setState({isModalOpen: false})
+    }
+
+    render() {
+        const { image, modalImage, tags } = this.props;
+        const { isModalOpen } = this.state;
+
     return (
-        <li className='gallery-item'>
-            <img src={ image } alt={tags} width="240"/>
+        <li className='ImageGalleryItem'>
+            <img className='ImageGalleryItem-image' src={image} alt={tags} onClick={this.openModal}/>
+            {isModalOpen && <Modal image={modalImage} tags={tags} onClose={this.closeModal} />}
         </li >
-    )
-}
+        )
+    }
+} 
