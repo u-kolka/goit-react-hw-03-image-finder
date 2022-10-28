@@ -21,7 +21,6 @@ export default class Searchbar extends Component {
         }
 
         this.props.onSearch(query);
-        this.setState({ query: '', })
     };
 
         handleChange = event => {

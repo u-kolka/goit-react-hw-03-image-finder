@@ -43,9 +43,9 @@ class App extends Component {
   }
         
 
-    onLoadMore = () => {
-      this.setState(prevState => ({ page: prevState.page + 1, isLoading: false }));
-    }
+  onLoadMore = () => {
+    this.setState(prevState => ({ page: prevState.page + 1, isLoading: false }));
+  };
 
   handleFormSubmit = (query) => {
     if (query === this.state.queryImages) {

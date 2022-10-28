@@ -6,6 +6,7 @@ export class ImageGallery extends Component {
 
     static propTypes = {
         images: PropTypes.array.isRequired,
+        key: PropTypes.number,
     }
     
     render() {

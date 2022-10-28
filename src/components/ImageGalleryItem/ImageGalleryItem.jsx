@@ -6,6 +6,7 @@ export class ImageGalleryItem extends Component {
 
     static propTypes = {
         image: PropTypes.string.isRequired,
+        modalImage: PropTypes.string.isRequired,
         tags: PropTypes.string.isRequired,
     }
 
